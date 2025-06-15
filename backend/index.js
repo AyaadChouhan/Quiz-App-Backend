@@ -41,7 +41,7 @@ Initialize.then(() => {
     }
   });
 
-  app.get("/authentication", async (req, res) => {
+  app.post("/authentication", async (req, res) => {
     // console.log(req.body);
     const { email, password } = req.body;
     try {
