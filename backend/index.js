@@ -23,6 +23,10 @@ app.use(
 Initialize.then(() => {
   console.log("db connected");
 
+  app.get("/", (req, res) => {
+    res.status(200).send({ message: "ok" });
+  });
+
   app.post("/add", async (req, res) => {
     try {
       const { firstname, lastname, email, password } = req.body;
